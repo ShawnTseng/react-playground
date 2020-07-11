@@ -3,6 +3,6 @@ import ReactDOM from 'react-dom';
 import Header from './Header';
 
 ReactDOM.render(
-    <Header />,
+    <Header title="This is title" />,
     document.getElementById('root')
 );

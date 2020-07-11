@@ -4,7 +4,7 @@ import Message from './Message'
 class Header extends Component {
     render() {
         return <div>
-            hello
+            {this.props.title}
             <Message />
         </div>
     }
