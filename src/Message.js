@@ -14,6 +14,8 @@ class Message extends Component {
             <div>
                 {this.state.text}
                 <button onClick={this.sayHi}>Say Hi</button>
+                <br />
+                {this.props.children}
             </div>
         );
     }
