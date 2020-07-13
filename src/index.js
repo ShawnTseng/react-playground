@@ -1,8 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Header from './Header';
+import { render } from 'react-dom';
 
-ReactDOM.render(
-    <Header title="This is title" />,
-    document.getElementById('root')
-);
+import Counter from './Counter';
+
+render(<Counter />, document.getElementById('root'));
+
