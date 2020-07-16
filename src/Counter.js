@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
 class Counter extends Component {
+    static defaultProps = { initCount: 0 }
+
     constructor(props) {
         super(props);
         this.state = ({
