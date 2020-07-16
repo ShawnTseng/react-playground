@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 
 class Counter extends Component {
-    state = {
-        count: 0
+    constructor(props) {
+        super(props);
+        this.state = ({
+            count: props.initCount
+        })
     }
 
     addCount = () => {
@@ -13,7 +16,7 @@ class Counter extends Component {
     }
 
     render() {
-         const { count } = this.state;
+        const { count } = this.state;
         return (
             <div>
                 <h1>{count}</h1>
