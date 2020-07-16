@@ -14,7 +14,16 @@ class Counter extends Component {
     addCount = () => {
         this.setState(state => ({
             count: state.count + 1,
-        }))
+        }));
+        this.setState(state => ({
+            count: state.count + 1,
+        }));
+        this.setState(state => ({
+            count: state.count + 1,
+        }), () => {
+            // Callback function, make sure we get correct value.
+            console.log(this.state.count);
+        })
     }
 
     render() {
