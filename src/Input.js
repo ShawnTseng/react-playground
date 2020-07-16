@@ -2,14 +2,18 @@ import React, { Component } from 'react';
 
 class Input extends Component {
     componentDidMount() {
-        this.refs.myInput.focus();
+        this.myInput.focus();
+    }
+
+    setRef = input => {
+        this.myInput = input;
     }
 
     render() {
         return (
             <div>
                 <h3>Enter you name</h3>
-                <input type="text" ref="myInput" />
+                <input type="text" ref={this.setRef} />
             </div>
         );
     }
