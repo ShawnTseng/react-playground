@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types'
 
 class Counter extends Component {
-    static defaultProps = { initCount: 0 }
+    // static defaultProps = { initCount: 0 }
 
     constructor(props) {
         super(props);
@@ -26,6 +27,14 @@ class Counter extends Component {
             </div>
         );
     }
+}
+
+Counter.defaultProps = {
+    initCount: 0
+}
+
+Counter.propTypes = {
+    initCount: PropTypes.number
 }
 
 export default Counter;
