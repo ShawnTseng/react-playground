@@ -1,19 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 
 class Input extends Component {
-    componentDidMount() {
-        this.myInput.focus();
-    }
+    myInput = createRef();
 
-    setRef = input => {
-        this.myInput = input;
+    componentDidMount() {
+        console.log(this.myInput);
+        this.myInput.current.focus();
     }
 
     render() {
         return (
             <div>
                 <h3>Enter you name</h3>
-                <input type="text" ref={this.setRef} />
+                <input type="text" ref={this.myInput} />
             </div>
         );
     }
