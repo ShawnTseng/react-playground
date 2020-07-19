@@ -3,6 +3,9 @@ import { render } from 'react-dom';
 
 import Counter from './Counter';
 import Input from './Input';
+import Progress from './Progress';
 
-render(<div><Counter /><Input /></div>, document.getElementById('root'));
+import './style/index.css';
+
+render(<div><Counter /><Input /><br /><Progress /></div>, document.getElementById('root'));
 
